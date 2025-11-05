@@ -20,13 +20,13 @@
   const CHALLENGE_URL_ENTRY_KEY = "entry.1897961336";
   const OPTIONAL_NOTE_ENTRY_KEY = "entry.1678530832";
 
-  document.addEventListener("keyup", async (e) => {
+  document.addEventListener("keyup", (e) => {
     if (e.ctrlKey && e.code === "KeyQ") {
       submitChallenge();
     }
   });
 
-  async function submitChallenge() {
+  function submitChallenge() {
     const comment = document.querySelector(".comment");
     const challengeTitle = comment.querySelector("h1").textContent;
 
@@ -40,7 +40,7 @@
       hintPrompt += " — Mode: ";
     }
 
-    const subtitle = await getSubtitle(comment);
+    const subtitle = getSubtitle(comment);
     if (subtitle) {
       hintPrompt += ` — ${subtitle}`;
     }
@@ -53,7 +53,7 @@
     openGoogleForm(USERNAME, submissionPrompt, window.location.href);
   }
 
-  async function openGoogleForm(username, challengeTitle, challengeUrl) {
+  function openGoogleForm(username, challengeTitle, challengeUrl) {
     const googleFormUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform`;
     const params = {
       [USERNAME_ENTRY_KEY]: username,
@@ -66,7 +66,7 @@
     window.open(`${googleFormUrl}?${urlParams.toString()}`);
   }
 
-  async function getSubtitle(comment) {
+  function getSubtitle(comment) {
     const subtitleParagraph = comment.querySelector("p");
     if (subtitleParagraph.querySelector("a")) {
       return null;
