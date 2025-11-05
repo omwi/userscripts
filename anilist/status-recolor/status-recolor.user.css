@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name         Google - Fixed search bar
+@namespace    https://github.com/omwi
+@version      0.1
+@description  This theme makes the navigation bar on top of Google searches stick to the top.
+@author       omwi
+==/UserStyle== */
+
+@-moz-document domain("anilist.co") {
+  .list-status[status="planning" i] {
+    background-color: #88ccee !important;
+  }
+
+  .list-status[status="watching" i],
+  .list-status[status="current" i],
+  .list-status[status="reading" i] {
+    background-color: #332288 !important;
+  }
+
+  .list-status[status="completed" i] {
+    background-color: #117733 !important;
+  }
+
+  .list-status[status="paused" i],
+  .list-status[status="dropped" i] {
+    background-color: #e69f00 !important;
+  }
+}
