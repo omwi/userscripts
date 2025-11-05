@@ -26,8 +26,8 @@
 
   let isShiftKeyCopy = false;
 
-  document.addEventListener("keydown", async (event) => {
-    if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() == "v") {
+  document.addEventListener("keydown", async (e) => {
+    if (e.ctrlKey && e.shiftKey && e.code === "KeyV") {
       isShiftKeyCopy = true;
     } else {
       isShiftKeyCopy = false;

@@ -20,8 +20,8 @@
   const CHALLENGE_URL_ENTRY_KEY = "entry.1897961336";
   const OPTIONAL_NOTE_ENTRY_KEY = "entry.1678530832";
 
-  document.addEventListener("keyup", async (event) => {
-    if (event.ctrlKey && event.key.toLowerCase() === "q") {
+  document.addEventListener("keyup", async (e) => {
+    if (e.ctrlKey && e.code === "KeyQ") {
       submitChallenge();
     }
   });

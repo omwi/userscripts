@@ -32,8 +32,8 @@
     thriller: "https://anilist.co/forum/thread/5556/comment/2882553", // mastery
   };
 
-  document.addEventListener("keyup", (event) => {
-    if (event.ctrlKey && event.key.toLowerCase() === "q") {
+  document.addEventListener("keyup", (e) => {
+    if (e.ctrlKey && e.code === "KeyQ") {
       openGenreChallenges();
     }
   });

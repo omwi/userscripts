@@ -15,7 +15,7 @@
   const ID_PREFIX = "anime/";
 
   document.addEventListener("keyup", (e) => {
-    if (e.ctrlKey && e.key.toLowerCase() === "b") {
+    if (e.ctrlKey && e.code === "KeyB") {
       const id = getId();
       openReleases(id);
     }

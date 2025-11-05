@@ -12,7 +12,7 @@
   "use strict";
 
   document.addEventListener("keyup", (e) => {
-    if (e.ctrlKey && e.key.toLowerCase() === "q") {
+    if (e.ctrlKey && e.code === "KeyQ") {
       clickNextTab();
     }
   });

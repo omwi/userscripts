@@ -11,8 +11,8 @@
 (function () {
   "use strict";
 
-  document.addEventListener("keyup", (event) => {
-    if (event.ctrlKey && event.key.toLowerCase() === "q") {
+  document.addEventListener("keyup", (e) => {
+    if (e.ctrlKey && e.code === "KeyQ") {
       updateCode();
     }
   });

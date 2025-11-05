@@ -13,8 +13,8 @@
 
   const EDITOR_URL = "https://awc.moe/challenges/editor";
 
-  document.addEventListener("keyup", (event) => {
-    if (event.ctrlKey && event.key === " ") {
+  document.addEventListener("keyup", (e) => {
+    if (e.ctrlKey && e.code === "Space") {
       const [threadId, commentId] = getIds(window.location.href);
       openInEditor(threadId, commentId);
     }
