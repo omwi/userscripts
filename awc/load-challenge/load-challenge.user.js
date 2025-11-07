@@ -15,11 +15,18 @@
 
   window.addEventListener("load", async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const threadId = urlParams.get("tid");
-    const commentId = urlParams.get("cid");
-    if (!threadId || !commentId) {
+    const threadId = parseInt(urlParams.get("tid"));
+    const commentId = parseInt(urlParams.get("cid"));
+
+    if (!threadId) {
       return;
     }
+
+    if (!commentId) {
+      loadNewChallenge(threadId);
+      return;
+    }
+
     const challengeUrl = await getChallengeUrl(threadId, commentId);
     loadChallenge(challengeUrl);
   });
@@ -50,8 +57,17 @@
 
   async function loadChallenge(challengeUrl) {
     const urlInput = document.querySelector("#challenge-post-url");
-    const loadChallengedButton = document.querySelector("#load-challenge-button");
+    const loadChallengeButton = document.querySelector("#load-challenge-button");
     urlInput.value = challengeUrl;
-    loadChallengedButton.click();
+    loadChallengeButton.click();
+  }
+
+  async function loadNewChallenge(threadId) {
+    const option = document.querySelector(`option[value="${threadId}"]`);
+    console.log(option);
+    if (!option) return;
+    option.selected = true;
+    const loadChallengeButton = document.querySelector("#load-challenge-button");
+    loadChallengeButton.click();
   }
 })();
