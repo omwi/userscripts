@@ -25,7 +25,7 @@
     mystery: "https://anilist.co/forum/thread/5557/comment/2994285", // mastery
     psychological: "https://anilist.co/forum/thread/5556/comment/2882553", // mastery
     romance: "https://anilist.co/forum/thread/5291/comment/2384761",
-    "sci-fi": "https://anilist.co/forum/thread/5292/comment/2384752",
+    "sci-fi": "https://anilist.co/forum/thread/5292/comment/2995390", // mastery
     "slice of life": "https://anilist.co/forum/thread/5293/comment/2384751",
     sports: "https://anilist.co/forum/thread/5876/comment/2384750",
     // supernatural: "https://anilist.co/forum/thread/6630/comment/2551397", // completed
@@ -42,6 +42,7 @@
     const names = getGenreNames();
     // using Set because of Thriller/Psychological 2-in-1 challenge
     const links = new Set(names.map((name) => challengeLinks[name]));
+    links.delete(undefined);
     links.forEach((link) => window.open(link));
   }
 
