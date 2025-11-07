@@ -6,7 +6,8 @@
 @author       omwi
 ==/UserStyle== */
 
-@-moz-document url-prefix("anilist.co/forum/thread/") {
+@-moz-document url-prefix("https://anilist.co/forum/thread/")
+{
   .comment .header time::after {
     content: attr(data-counter raw-string) " links";
     margin-left: 1em;
