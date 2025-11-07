@@ -16,11 +16,11 @@
   document.addEventListener("keyup", (e) => {
     if (e.ctrlKey && e.code === "Space") {
       const [threadId, commentId] = getIds(window.location.href);
-      openInEditor(threadId, commentId);
+      openChallengeEditor(threadId, commentId);
     }
   });
 
-  function openInEditor(threadId, commentId) {
+  function openChallengeEditor(threadId, commentId) {
     window.open(`${EDITOR_URL}?tid=${threadId}&cid=${commentId}`);
   }
 
