@@ -22,7 +22,7 @@
       return;
     }
 
-    if (!commentId) {
+    if (!commentId || commentId === 1) {
       loadNewChallenge(threadId);
       return;
     }
