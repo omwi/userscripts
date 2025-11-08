@@ -1,0 +1,168 @@
+/* ==UserStyle==
+@name         awc: Dark Theme
+@namespace    https://github.com/omwi
+@version      0.1
+@description  editor dark theme
+@author       omwi
+==/UserStyle== */
+
+@-moz-document url-prefix("https://awc.moe/challenges/editor")
+{
+  :root {
+    --color-gray-50: oklch(0.985 0.002 247.839);
+    --color-gray-100: oklch(0.967 0.003 264.542);
+    --color-gray-200: oklch(0.928 0.006 264.531);
+    --color-gray-300: oklch(0.872 0.01 258.338);
+    --color-gray-400: oklch(0.707 0.022 261.325);
+    --color-gray-500: oklch(0.551 0.027 264.364);
+    --color-gray-600: oklch(0.446 0.03 256.802);
+    --color-gray-700: oklch(0.373 0.034 259.733);
+    --color-gray-800: oklch(0.278 0.033 256.848);
+    --color-gray-900: oklch(0.21 0.034 264.665);
+    --color-gray-950: oklch(0.13 0.028 261.692);
+
+    --background-dark: var(--color-gray-950);
+
+    --primary: #152232;
+    --primary-dark: #0b1622;
+    --primary-light: #1e2a38;
+
+    --text: #9fadbd;
+    --text-light: #c9d7e3;
+
+    --border-color: var(--color-gray-700);
+    --border-color-light: var(--color-gray-300);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .rounded {
+    border-radius: 8px;
+  }
+
+  input[type="checkbox"] {
+    opacity: 0.8;
+  }
+
+  input:focus-visible {
+    outline: none;
+  }
+
+  body {
+    background-color: var(--background-dark);
+    scrollbar-color: var(--primary-dark) var(--primary-light);
+  }
+
+  .container {
+    background-color: var(--primary-dark);
+  }
+
+  .sub-container {
+    background-color: var(--primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+  }
+
+  .title {
+    border: 1px solid var(--border-color-light);
+    border-left: initial;
+    border-right: initial;
+    border-radius: 16px;
+    background-color: var(--primary-light);
+    color: var(--text-light);
+    font-variant: initial;
+  }
+
+  .code-editor-form label {
+    color: var(--text-light);
+  }
+
+  .filter input,
+  .filter select {
+    height: 24px;
+  }
+
+  input,
+  select {
+    background-color: var(--primary);
+    color: var(--text);
+    border: 1px solid var(--border-color);
+  }
+
+  .sub-container input,
+  .sub-container select {
+    background-color: var(--primary-light);
+  }
+
+  textarea.code-display {
+    background-color: var(--primary-light);
+    color: var(--text);
+    scrollbar-color: var(--primary-light) var(--primary-dark);
+  }
+
+  .button {
+    border: 1px solid var(--border-color-light);
+    color: var(--text-light);
+  }
+
+  .selected-challenge > .sub-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .load-anilist {
+    height: 100%;
+    align-items: center;
+  }
+
+  .vertical-label input,
+  .vertical-label select {
+    margin-top: 4px;
+  }
+
+  .load-anilist .vertical-label {
+    width: max-content !important;
+  }
+
+  .legend-values input:first-of-type,
+  .legend-values span:first-of-type {
+    margin-bottom: 8px;
+  }
+
+  .legend-values span {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .selected-challenge a:first-of-type {
+    margin-bottom: 4px;
+  }
+
+  .vertical-flex-container {
+    background-color: var(--primary-dark);
+    border: 1px solid var(--border-color);
+  }
+
+  .sub-container.edit-display {
+    background-color: var(--primary-dark);
+    border: none;
+  }
+
+  .requirement-additional span {
+    background-color: var(--color-gray-700);
+  }
+
+  .requirement-additional input {
+    color: var(--text-light);
+  }
+
+  .sub-container:has(.code-display-container) {
+    background-color: var(--primary-dark);
+  }
+
+  .copy-code-button {
+    margin-bottom: 4px;
+  }
+}
