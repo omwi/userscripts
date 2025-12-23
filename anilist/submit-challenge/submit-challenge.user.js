@@ -57,7 +57,7 @@
     const googleFormUrl = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/viewform`;
     const params = {
       [USERNAME_ENTRY_KEY]: username,
-      [CHALLENGE_TITLE_ENTRY_KEY]: challengeTitle,
+      [CHALLENGE_TITLE_ENTRY_KEY]: challengeTitle.trim(),
       [CHALLENGE_URL_ENTRY_KEY]: challengeUrl,
       // [OPTIONAL_NOTE_ENTRY_KEY]: OPTIONAL_NOTE,
     };
