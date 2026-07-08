@@ -15,7 +15,7 @@
     action: "https://anilist.co/forum/thread/5288/comment/2579647", // mastery
     adventure: "https://anilist.co/forum/thread/6111/comment/2916432", // mastery
     comedy: "https://anilist.co/forum/thread/5289/comment/2384786",
-    drama: "https://anilist.co/forum/thread/5875/comment/2569162", // mastery
+    // drama: "https://anilist.co/forum/thread/5875/comment/2569162", // completed
     ecchi: "https://anilist.co/forum/thread/6631/comment/2384783",
     fantasy: "https://anilist.co/forum/thread/5290/comment/2905388", // mastery
     horror: "https://anilist.co/forum/thread/5558/comment/2384780",
@@ -26,7 +26,7 @@
     psychological: "https://anilist.co/forum/thread/5556/comment/2882553", // mastery
     romance: "https://anilist.co/forum/thread/5291/comment/2384761",
     "sci-fi": "https://anilist.co/forum/thread/5292/comment/2995390", // mastery
-    "slice of life": "https://anilist.co/forum/thread/5293/comment/2384751",
+    "slice of life": "https://anilist.co/forum/thread/5293/comment/3007341", // mastery
     sports: "https://anilist.co/forum/thread/5876/comment/2384750",
     // supernatural: "https://anilist.co/forum/thread/6630/comment/2551397", // completed
     thriller: "https://anilist.co/forum/thread/5556/comment/2882553", // mastery
@@ -48,13 +48,13 @@
 
   function getGenreNames() {
     const genreDataList = [...document.querySelectorAll("div.data-list")].find(
-      (dataList) => dataList.querySelector("div.type").textContent === "Genres"
+      (dataList) => dataList.querySelector("div.type").textContent === "Genres",
     );
 
     if (!genreDataList) return;
 
-    return [...genreDataList.querySelectorAll("div.value span")].map((genreLink) =>
-      genreLink.textContent.toLowerCase()
+    return [...genreDataList.querySelectorAll("div.value span")].map(
+      (genreLink) => genreLink.textContent.toLowerCase(),
     );
   }
 })();
