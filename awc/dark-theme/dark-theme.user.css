@@ -32,6 +32,9 @@
 
     --border-color: var(--color-gray-700);
     --border-color-light: var(--color-gray-300);
+
+    --space-md: 0.5rem;
+    --space-sm: 0.25rem;
   }
 
   a {
@@ -39,10 +42,10 @@
   }
 
   .rounded {
-    border-radius: 8px;
+    border-radius: var(--space-md);
   }
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     opacity: 0.8;
   }
 
@@ -114,12 +117,13 @@
 
   .load-anilist {
     height: 100%;
-    align-items: center;
+    align-items: flex-end;
+    padding: var(--space-sm) 0;
   }
 
   .vertical-label input,
   .vertical-label select {
-    margin-top: 4px;
+    margin-top: var(--space-sm);
   }
 
   .load-anilist .vertical-label {
@@ -128,7 +132,7 @@
 
   .legend-values input:first-of-type,
   .legend-values span:first-of-type {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-md);
   }
 
   .legend-values span {
@@ -137,7 +141,7 @@
   }
 
   .selected-challenge a:first-of-type {
-    margin-bottom: 4px;
+    margin-bottom: var(--space-sm);
   }
 
   .vertical-flex-container {
@@ -148,6 +152,10 @@
   .sub-container.edit-display {
     background-color: var(--primary-dark);
     border: none;
+  }
+
+  .requirement-media input {
+    color: var(--text-light);
   }
 
   .requirement-additional span {
@@ -163,6 +171,6 @@
   }
 
   .copy-code-button {
-    margin-bottom: 4px;
+    margin-bottom: var(--space-sm);
   }
 }
