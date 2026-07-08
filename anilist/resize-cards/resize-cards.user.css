@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name         anilist: Resize Cards
+@namespace    https://github.com/omwi
+@version      0.1
+@description  Make media cards smaller
+@author       omwi
+==/UserStyle== */
+
+@-moz-document domain("anilist.co") {
+  .list-entries {
+    /*grid-template-columns: repeat(auto-fill, 130px) !important;
+    grid-template-rows: repeat(auto-fill, 182px) !important;*/
+    gap: 8px !important;
+  }
+
+  /*.entry-card {
+    height: 182px !important;
+    font-size: 1.25rem !important;
+  }
+
+  .entry-card .title a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }*/
+}
