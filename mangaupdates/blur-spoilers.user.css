@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name         mangaupdates: Blur Spoilers
+@namespace    https://github.com/omwi
+@version      0.1
+@description  blurs categories section
+@author       omwi
+==/UserStyle== */
+
+@-moz-document domain('mangaupdates.com') {
+  div[data-cy='info-box-categories'] {
+    filter: blur(5px);
+  }
+}
